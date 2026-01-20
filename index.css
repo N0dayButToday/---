@@ -1,0 +1,71 @@
+.rent-typewriter {
+  font-family: 'Special Elite', cursive, monospace;
+  /* 잉크가 번진 듯한 미세한 그림자 */
+  text-shadow: 0.3px 0.3px 0.5px rgba(0, 0, 0, 0.3);
+  
+  /* 타자기 특유의 강한 대비 */
+  filter: contrast(150%) brightness(90%);
+  
+  /* 글자 테두리를 거칠게 표현 */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* (선택 사항) 웹사이트 전체 분위기를 잡고 싶다면 추가하세요 */
+body {
+  margin: 0;
+  
+  /* 배경 이미지 설정 (검은색 막 + 이미지) */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), /* 0.7은 70% 어둡게 한다는 뜻 */
+    url('/images/eastvill.jpg'); /* 여기에 준비한 파일명을 적으세요 */
+
+  /* 이미지가 화면을 꽉 채우도록 설정 */
+  background-size: cover;
+  background-position: center;
+  
+  /* 스크롤을 내려도 배경은 뒤에 고정되도록 설정 (고급스러운 느낌) */
+  background-attachment: fixed;
+  
+  /* 기본 글자색 */
+  color: #e6e6e6;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.rent-paper {
+  /* 1. 배경색 (누런 갱지 색) */
+  background-color: #e9e6e6;
+  color: #18181b; /* 글자는 진한 검정 */
+
+  /* 2. 배경 이미지 합치기 (줄무늬 + 노이즈 질감) */
+  background-image: 
+    /* 줄무늬 (노트 느낌) */
+    linear-gradient(#cdc0ac 1px, transparent 1px),
+    
+    /* 거친 노이즈 질감 (SVG 코드) */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+
+  /* 3. 패턴 크기 조절 */
+  background-size: 100% 2rem, 200px 200px; /* 줄 간격 2rem, 노이즈 크기 200px */
+  
+  /* 4. 종이 질감 혼합 모드 (자연스럽게 섞이도록) */
+  background-blend-mode: multiply;
+}
+
+.noline {
+  /* 1. 배경색 (누런 갱지 색) */
+  background-color: #e9e6e6;
+  color: #18181b; /* 글자는 진한 검정 */
+
+  background-image: 
+    
+    /* 거친 노이즈 질감 (SVG 코드) */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+
+  /* 3. 패턴 크기 조절 */
+  background-size: 100% 2rem, 200px 200px; /* 줄 간격 2rem, 노이즈 크기 200px */
+  
+  /* 4. 종이 질감 혼합 모드 (자연스럽게 섞이도록) */
+  background-blend-mode: multiply;
+}
