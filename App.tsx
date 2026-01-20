@@ -6,6 +6,9 @@ import { RankingPhase } from './components/RankingPhase';
 import { RevealPhase } from './components/RevealPhase';
 import { AppPhase, Item, Participant } from './types';
 import { Trophy, Users, Settings2, Eye } from 'lucide-react';
+// @ts-ignore
+import rentLogo from './images/rent-logo.png'
+
 
 const App: React.FC = () => {
   const [phase, setPhase] = useState<AppPhase>('setup');
@@ -45,7 +48,7 @@ const App: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-end gap-2 pb-1">
             <img
-              src="/images/rent@2x-8.png"
+              src={rentLogo}
               alt="RENT"
               className="h-12 w-auto object-contain"
             />
